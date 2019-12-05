@@ -20,15 +20,15 @@ class HashTable
 public:
     HashTable(int bsize);  // Constructor
 
-    // inserts a key into hash table
-    bool insertItem(int key);
-
     // hash function to map values to key
     unsigned int hashFunction(int key);
 
-    void printTable();
-
     node* searchItem(int key);
+    
+    // inserts a key into hash table
+    bool insertItem(int key);
+    
+    void printTable();
 };
 
 #endif
