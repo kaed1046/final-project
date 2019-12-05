@@ -1,4 +1,4 @@
-// CPP program to implement hashing with chaining
+// 2nd CPP program to implement hashing with chaining
 #include<iostream>
 #include "hash.hpp"
 
@@ -24,7 +24,7 @@ HashTable::HashTable(int bsize)
 //function to calculate hash function
 unsigned int HashTable::hashFunction(int key)
 {
-    return (key % tableSize);
+    return (floor(key % tableSize) % tableSize);
 }
 
 // TODO Complete this function
