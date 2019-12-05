@@ -46,13 +46,11 @@ node* HashTable::searchItem(int key)
     //TODO: Search the list at that specific index and return the node if found
 }
 
-//TODO Complete this function
-//function to insert
+//Function to insert
 bool HashTable::insertItem(int key)//CONFIRMED GUD
 {
     if(!searchItem(key))
     {
-        // TODO :
         // Use the hash function on the key to get the index/slot,
         // create a new node with the key and insert it in this slot's list
         int index = hashFunction(key);
@@ -67,11 +65,9 @@ bool HashTable::insertItem(int key)//CONFIRMED GUD
         cout<<"duplicate entry: "<<key<<endl;
         return false;
     }
-
 }
 
-//TODO Complete this function
-// function to display hash table
+//Function to display hash table
 void HashTable::printTable()
 {
     node* temp = new node;
