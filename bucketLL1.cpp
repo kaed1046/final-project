@@ -1,6 +1,6 @@
 // 1st CPP program to implement hashing with chaining
 #include<iostream>
-#include "hash.hpp"
+#include "bucketLL.hpp"
 
 
 using namespace std;
