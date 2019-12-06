@@ -3,6 +3,7 @@
 #include <sstream>
 #include <fstream>
 #include <istream>
+#include <string>
 using namespace std;
 
 
@@ -32,7 +33,7 @@ bool HashTable::insertItem(int key)
     {
       table[i] = key; //place the info in the array
       numAdded++;
-      calcLoadFactor();
+      loadFactor = calcLoadFactor();
       return true;
     }
   }
@@ -44,7 +45,7 @@ bool HashTable::insertItem(int key)
     {
       table[i] = key;
       numAdded++;
-      calcLoadFactor();
+      loadFactor = calcLoadFactor();
       return true;
     }
   }
@@ -88,8 +89,9 @@ bool HashTable::deleteItem(int key)
   }
 }
 
-void HashTable::calcLoadFactor()
+int HashTable::calcLoadFactor()
 {
-  loadFactor = numAdded / tableSize;
-  return;
+  int loadF;
+  loadF = numAdded / tableSize;
+  return loadF;
 }
