@@ -3,6 +3,11 @@
 #include <string>
 using namespace std;
 
+/*struct node
+{
+    int key;
+    struct node* next;
+};*/
 
 class HashTable
 {
@@ -12,6 +17,8 @@ class HashTable
     int table[tableSize];
 
     int numAdded;
+
+
 
 public:
     int loadFactor;
@@ -23,7 +30,7 @@ public:
     unsigned int hashFunction(int key);
     void printTable();
     int Lookup(int key);
-    void calcLoadFactor();
+    int calcLoadFactor();
 };
 
 #endif
