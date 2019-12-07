@@ -24,7 +24,7 @@ HashTable::HashTable(int bsize)
 //function to calculate hash function
 unsigned int HashTable::hashFunction(int key)
 {
-    return (floor(key % tableSize) % tableSize);
+    return (floor(key / tableSize) % tableSize);
 }
 
 // TODO Complete this function
